@@ -108,3 +108,9 @@ hostname -I
 
 In the SSH Server, we select the remote machine where we have to transmit the built and tested software.
 Change the rights of the binary in the first transfer set and launch it in the second transfer set.
+
+
+
+
+> For Further informations :
+> Check this link : [Docker & jenkins : data that persists by Riot Games](https://technology.riotgames.com/news/docker-jenkins-data-persists)
