@@ -59,6 +59,20 @@ ENV JAVA_OPTS="-Xmx8192m"
 ENV JENKINS_OPTS="--handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
 ```
 
+Make the volumes to make data persistent : 
+```sh 
+docker volume create jenkins-log
+docker volume create jenkins-data
+```
+
+
+Run it with : 
+```sh
+docker run -p 8080:8080 -p 50000:50000 --name=jenkins-master --mount 
+source=jenkins-log,target=/var/log/jenkins -d myjenkins
+```
+
+
 > Common Jenkins Dockerfiles on the net have problems while installing plugins... 
 ### Plugins
 
