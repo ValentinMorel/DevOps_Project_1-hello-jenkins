@@ -69,11 +69,25 @@ ENV JENKINS_OPTS="--handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log -
 | PostBuildScript | [link](https://plugins.jenkins.io/postbuildscript/) |
 
 ## Configuration
+### Build section
+
+In the build section goes : 
+- the dependencies download
+- the tests 
+- the build
+
+### Publish over SSH
 
 ![](./images/Publish_over_ssh.png)
 
 hostname can be found with : 
 ```sh
->hostname -I
+hostname -I
 ```
 
+### Post build actions
+
+![](./images/post_build_actions.png)
+
+In the SSH Server, we select the remote machine where we have to transmit the built and tested software.
+Change the rights of the binary in the first transfer set and launch it in the second transfer set.
